@@ -3,7 +3,7 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<!-- <packaging>jar</packaging> -->
+	<packaging>jar</packaging>
 	<groupId>example</groupId>
 	<artifactId>java-opts</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -76,22 +76,22 @@
 			<!-- Step 2 from 2
 			     Second, we are going to create executable and classpath-aware jar, with the link to the dependencies copied in the first step:
 			 -->
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-jar-plugin</artifactId>-->
-<!--				<version>${maven-jar-plugin.version}</version>-->
-<!--				<configuration>-->
-<!--					<archive>-->
-<!--						<manifest>-->
-<!--							<addClasspath>true</addClasspath>-->
-<!--							<classpathPrefix>libs/</classpathPrefix>-->
-<!--							<mainClass>-->
-<!--								example.javaopts.JavaOptsApplication-->
-<!--							</mainClass>-->
-<!--						</manifest>-->
-<!--					</archive>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven-jar-plugin.version}</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>libs/</classpathPrefix>
+							<mainClass>
+								example.javaopts.JavaOptsApplication
+							</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
